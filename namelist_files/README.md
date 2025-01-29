@@ -1,0 +1,1 @@
+This directory includes namelist files used for WPS and WRF-Fire. The namelist files were adapted from namelist files provided by Tim Juliano (NCAR) within WPS and WRF software from a LEAPHI tutorial.
