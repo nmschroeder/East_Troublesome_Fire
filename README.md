@@ -1,4 +1,4 @@
-# The 2020 East Troublesome Fire: What may have happened if there had been one more windy day?
+# The 2020 East Troublesome Fire: What if there had been one more windy day?
 This repository contains code to accompany a manuscript by Hemming-Schroeder et al., submitted to *Earth's Future*.
 
 The figure scripts are intended to be completed in the following order as some outputs depend on outputs from the previous scripts:
