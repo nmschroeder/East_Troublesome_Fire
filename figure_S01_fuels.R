@@ -7,6 +7,8 @@ library(dplyr)
 library(ggplot2)
 library(cowplot)
 
+theme_set(theme_bw(base_size = 14))
+
 # Read in the 2019 fire behavior fuel models
 fuel2019 <- raster("data/LC19_F40_200_estes_park.tif")
 
@@ -36,15 +38,13 @@ fuel_diff_2019_2022_df$check <- as.integer(fuel_diff_2019_2022_df$check, length 
 # Plot the raster difference between 2019 and 2020
 p1 <- ggplot() + geom_raster(data = fuel_diff_2019_2020_df, mapping = aes(x = x, y = y, fill = as.factor(check))) +
   scale_fill_viridis_d(name = "Change") + labs(x = "Easting (m)", y = "Northing (m)") + 
-  ggtitle("Pixels that change between 2019 and 2020") +
-  theme_bw()
+  ggtitle("Pixels that change between 2019 and 2020")
 
 # Plot the raster difference between 2019 and 2022
 p2 <- ggplot() + geom_raster(data = fuel_diff_2019_2022_df, mapping = aes(x = x, y = y, fill = as.factor(check))) +
   scale_fill_viridis_d(name = "Change") + labs(x = "Easting (m)", y = "Northing (m)") + 
-  ggtitle("Pixels that change between 2019 and 2022") +
-  theme_bw()
+  ggtitle("Pixels that change between 2019 and 2022")
 
-pgrid <- plot_grid(p1, p2, ncol = 2, align = "hv", labels = c("a", "b"))
-ggsave("figures/figure_S01_fuel_diff_panel.png", plot = pgrid, width = 12, height = 4, units = "in")
+pgrid <- plot_grid(p1, p2, ncol = 1, align = "hv", labels = c("a", "b"))
+ggsave("figures/figure_S01_fuel_diff_panel.png", plot = pgrid, width = 7, height = 10, units = "in")
 

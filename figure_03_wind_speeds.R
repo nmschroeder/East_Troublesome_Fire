@@ -116,9 +116,10 @@ for (i in 1:N_times){
   # vertical wind)
   
   U <- ncvar_get(nc, "UU")
+  
   V <- ncvar_get(nc, "VV")
   
-  U <- U[,,1]
+  U <- U[,,1] # Still a matrix
   V <- V[,,1]
   
   LAT_U <- ncvar_get(nc, "XLAT_U")
