@@ -32,4 +32,7 @@ The **wps_outputs** file includes the static layers and meteorological fields ge
 
 The **wrf_outputs** file includes outputs for the inner domain (domain 02) for parameter selection, the control simulation, and the experiment simulation. The notation hgt_02_gm_0145000 refers the fire wind height of 2 meters and ground moisture of 14.5%. The ground fuel moisture values vary in the **parameter_selection** directory from 9% to 20% for selecting the best ground fuel moisture of the values considered in this study. We only included outputs every 12 hours due to storage limitations. The figures were created with WRF outputs generated every 20 minutes of simulation time.
 
+To learn how to use WRF-Fire, we used the NCAR Research Applications Laboratory YouTube tutorial for WRF-Fire located here:
+https://www.youtube.com/playlist?list=PLl6YBMxdrM8k7ad3PrfRXinzl48COlrOP
+
 
